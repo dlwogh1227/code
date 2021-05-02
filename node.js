@@ -9,9 +9,10 @@ const options = {method: 'GET'}
 app.get('/', (req, res) => {
   fetch(url, options)
   .then(res => res.json())
-  .then(json => console.log())
-  .catch(err => console.error('error:' + err));
-  res.send(res.json);
+  .then(json => {
+    res.send(json);
+  })
+  .catch(err => console.error('error:' + err))
 })
 
 app.listen(port, () => {
