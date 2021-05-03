@@ -7,12 +7,7 @@ let url = 'https://api.upbit.com/v1/market/all?isDetails=false'   //업비트 ap
 const options = {method: 'GET'}
 
 app.get('/', (req, res) => {
-  fetch(url, options)
-  .then(res => res.json())
-  .then(json => {
-    res.send(json);
-  })
-  .catch(err => console.error('error:' + err))
+  
 })
 
 app.listen(port, () => {

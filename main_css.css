@@ -41,29 +41,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
-.jumbotron{
-    margin-bottom: 0px;
-}
-.jumbotron > h1 {
-    color : green;
-}
-#main_navbar{
-    width: 100% auto;
-	position: sticky;
-	top: 0px;
-}
-/* 네비게이션 배경 색상 */
-.navbar-inverse {
-    background-color: yellowgreen;
-}
-#main_navbar > li > a:hover{
-    background-color: black;
-}
-/* 네비게이션 글자 속성 */
-#main_navbar > li > a{
-    color: blue;
-    font-weight: bold;
-    text-align: center;
-}
