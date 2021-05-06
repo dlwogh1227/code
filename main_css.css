@@ -41,3 +41,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+#mainpgTable{
+	text-align: center;
+	margin-right: 5rem;
+	margin-left: 5rem;
+}
