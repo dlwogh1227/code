@@ -1,22 +1,22 @@
-let create_table = function(TableName, trade_price, change_price, change, psigned_change_rate){
-    if(change==="RISE"){
+let create_table = function(TableName, contPrice, prevClosePrice, chgRate, chgAmt){
+    if(contPrice>prevClosePrice){
         var sign = "+";
         var tablecolor = "table-danger"
-    }else if(change==="FALL"){
+    }else if(contPrice<prevClosePrice){
         var sign = "-";  
         var tablecolor = "table-info"  
-    }else if(change==="EVEN"){
+    }else if(contPrice==prevClosePrice){
         var sign = "";
         var tablecolor = "table-light"
     }
  
     return      `
-                <table class="table table-hover">
+                <table class="table table-hover col-md-4 col-xs-12">
                     <tbody>
                         <tr class="${tablecolor}"  onClick="location.href='#'">
                             <th scope="row">${TableName}</th>
-                            <td>${trade_price}(${sign}${change_price})</td>
-                            <td>${signed_change_rate}</td>
+                            <td>${contPrice}(${sign}${chgAmt})</td>
+                            <td>${sign}${chgRate}</td>
                         <tr>
                     </tbody>
                 </table>
@@ -24,4 +24,4 @@ let create_table = function(TableName, trade_price, change_price, change, psigne
                 
 }
 
-module.exports = create_table;
+module.exports = create_table();
