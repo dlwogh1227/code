@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <mata name="viewport" content="width=device-width, initial-scale=1.0"></mata>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <style>
         @import url("bootstrap/api/bootstrap.css");
@@ -51,17 +52,24 @@
         </div>
       </nav>
 
-      <div class="jumbotron">
-        <h1 class="display-3">Welcome!</h1>
-        <p class="lead">This web is run for study purposes.</p>
+      <div id="mainpgContent">       
+        <section id="mainpgChart">
+          
+        </section>
+        <section id="mainpgList">
+          <table class="table table-hover">
+            <tbody></tbody>
+          </table>
+        </section>
       </div>
-
-      <div class="row" id="mainpgTable">
-
-      <div>
+            
       <script type="text/javascript" src="./BTCname.js"></script>
       <script type="text/javascript" src="./creatTable.js"></script>
+      <script>
+        for(i in BTCname){
+          $("#mainpgList").find('tbody').append(create_table(BTCname[i].korean_name, BTCname[i].market));
+        }
+      </script>
       <script type="text/javascript" src="./getCoinData.js"></script>
-
 </body>
 </html>

@@ -21,6 +21,6 @@ ws.onopen = () => {
     ws.onmessage = function(event){
         var enc = new TextDecoder("utf-8");
         var arr =new Uint8Array(event.data);
-        console.log(enc.decode(arr));
+        update_table(JSON.parse(enc.decode(arr)).cd, JSON.parse(enc.decode(arr)).tp, JSON.parse(enc.decode(arr)).scp, JSON.parse(enc.decode(arr)).c, JSON.parse(enc.decode(arr)).scr);
     }
 }

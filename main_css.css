@@ -41,9 +41,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-#mainpgTable{
-	text-align: center;
-	margin-right: 5rem;
-	margin-left: 5rem;
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#mainpgContent{
+	width: 100%;
+	height: 100%;
+}
+#mainpgChart {
+	width: 70%;
+	float: left;
+}
+#mainpgList {
+	width: 25%;
+	height: 100%;
+	float: right;
+	margin-right: 40px;
+	border: 1px solid black;
+	overflow: auto;
 }
